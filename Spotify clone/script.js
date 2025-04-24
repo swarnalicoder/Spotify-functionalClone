@@ -7,7 +7,7 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://${window.location.host}/${folder}/`); // ✅ Fixed template literal
+    let a = await fetch(`/${folder}/`); // ✅ Fixed template literal
     let response = await a.text();
     console.log(response);
 
